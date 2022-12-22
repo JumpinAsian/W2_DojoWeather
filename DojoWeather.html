@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DojoWeather.css">
+    <title>DojoWeather</title>
+</head>
+
+<body>
+
+    <!-- top of page -->
+    <div class="top-bar">
+        <h1 class="top-title">DojoWeather</h1>
+        <ul class="top-btns">
+            <li onclick="alert1()"><a href="#">Burbank</a></li>
+            <li onclick="alert2()"><a href="#">Chicago</a></li>
+            <li onclick="alert3()"><a href="#">Dallas</a></li>
+        </ul>
+    </div>
+
+    <!-- location header content -->
+    <div class="loc-bar">
+        <h1 class="loc-title">San Jose</h1>
+        <form>
+            <label>Show temperature in </label>
+            <select name="temp" onchange="convert(this)">
+                <option>°C</option>
+                <option>°F</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- main content -->
+    <div class="day-column">
+        <div class="today">
+            <p class="day-size">Today</p>
+            <img src="some_rain.png" alt="somerain" class="icon-a">
+            <p class="some-text">some rain</p>
+            <p class="day-temps"><span class="high" id="temp1">24</span><span class="low" id="temp2">18</span></p>
+        </div>
+        <div class="tomorrow">
+            <p class="day-size">Tomorrow</p>
+            <img src="some_sun.png" alt="somesun" class="icon-a">
+            <p class="some-text">some sun</p>
+            <p class="day-temps"><span class="high" id="temp3">27</span><span class="low" id="temp4">19</span></p>
+        </div>
+        <div class="friday">
+            <p class="day-size">Friday</p>
+            <img src="some_clouds.png" alt="someclouds" class="icon-a">
+            <p class="some-text">some clouds</p>
+            <p class="day-temps"><span class="high" id="temp5">21</span><span class="low" id="temp6">16</span></p>
+        </div>
+        <div class="saturday">
+            <p class="day-size">Saturday</p>
+            <img src="some_sun.png" alt="somesun" class="icon-a">
+            <p class="some-text">some sun</p>
+            <p class="day-temps"><span class="high" id="temp7">26</span><span class="low" id="temp8">21</span></p>
+        </div>
+    </div>
+
+    <!-- Stop! Cookie time -->
+    <div class="cookie-container" id="remove-cookie-container">
+        <img src="cookie.png" alt="cookie" class="image-cookie">
+        <div class="text">
+            <h3>Stop! Cookie time</h3>
+            <p>We use cookies (sadly not the dible ones) to personalize content and ads, to provide social media
+                features
+                and to analyse our traffic.<span onclick="readmore(this)"><a href="#">Read more...</a></span></p>
+        </div>
+        <button class="btn-accept" onclick="iaccept('#remove-cookie-container')">I Accept</button>
+    </div>
+
+    <script src="DojoWeather.js"></script>
+</body>
+
+</html>
